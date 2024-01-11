@@ -16,6 +16,11 @@ type MessageToCreate struct {
 	Markdown         *Markdown                 `json:"markdown,omitempty"`
 	Keyboard         *keyboard.MessageKeyboard `json:"keyboard,omitempty"` // 消息按钮组件
 	EventID          string                    `json:"event_id,omitempty"` // 要回复的事件id, 逻辑同MsgID
+	Media            *Media                    `json:"media,omitempty"`    // 媒体消息
+}
+
+type Media struct {
+	FileInfo string `json:"file_info,omitempty"`
 }
 
 // MessageReference 引用消息

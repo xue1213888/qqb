@@ -81,6 +81,32 @@ func (o *openAPI) PostQQMessage(ctx context.Context, openid string, msg *dto.Mes
 	return resp.Result().(*dto.Message), nil
 }
 
+func (o *openAPI) PostQQFile(ctx context.Context, openid string, msg *dto.FileToCreate) (*dto.FileResponse, error) {
+	resp, err := o.request(ctx).
+		SetResult(dto.FileResponse{}).
+		SetPathParam("openid", openid).
+		SetBody(msg).
+		Post(o.getURL(qqFileURI))
+	if err != nil {
+		return nil, err
+	}
+
+	return resp.Result().(*dto.FileResponse), nil
+}
+
+func (o *openAPI) PostGroupFile(ctx context.Context, channelID string, msg *dto.FileToCreate) (*dto.FileResponse, error) {
+	resp, err := o.request(ctx).
+		SetResult(dto.FileResponse{}).
+		SetPathParam("group_openid", channelID).
+		SetBody(msg).
+		Post(o.getURL(groupFileURI))
+	if err != nil {
+		return nil, err
+	}
+
+	return resp.Result().(*dto.FileResponse), nil
+}
+
 func (o *openAPI) PostGroupMessage(ctx context.Context, channelID string, msg *dto.MessageToCreate) (*dto.Message, error) {
 	resp, err := o.request(ctx).
 		SetResult(dto.Message{}).

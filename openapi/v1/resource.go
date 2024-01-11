@@ -30,7 +30,9 @@ const (
 	messageURI  uri = "/channels/{channel_id}/messages/{message_id}"
 
 	qqMessageURI    uri = "/v2/users/{openid}/messages"
+	qqFileURI       uri = "/v2/users/{openid}/files"
 	groupMessageURI uri = "/v2/groups/{group_openid}/messages"
+	groupFileURI    uri = "/v2/groups/{group_openid}/files"
 
 	userMeURI       uri = "/users/@me"
 	userMeGuildsURI uri = "/users/@me/guilds"
