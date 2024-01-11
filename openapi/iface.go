@@ -68,7 +68,9 @@ type MessageAPI interface {
 	Messages(ctx context.Context, channelID string, pager *dto.MessagesPager) ([]*dto.Message, error)
 	PostMessage(ctx context.Context, channelID string, msg *dto.MessageToCreate) (*dto.Message, error)
 	PostQQMessage(ctx context.Context, openid string, msg *dto.MessageToCreate) (*dto.Message, error)
+	PostQQFile(ctx context.Context, openid string, msg *dto.FileToCreate) (*dto.FileResponse, error)
 	PostGroupMessage(ctx context.Context, groupID string, msg *dto.MessageToCreate) (*dto.Message, error)
+	PostGroupFile(ctx context.Context, groupID string, msg *dto.FileToCreate) (*dto.FileResponse, error)
 	PatchMessage(ctx context.Context,
 		channelID string, messageID string, msg *dto.MessageToCreate) (*dto.Message, error)
 	RetractMessage(ctx context.Context, channelID, msgID string, options ...RetractMessageOption) error
