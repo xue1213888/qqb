@@ -132,7 +132,7 @@ type QQGroupDelRobotHandler func(event *dto.WSPayload, data *dto.WSQQGroupDelRob
 type QQGroupMsgRejectHandler func(event *dto.WSPayload, data *dto.WSQQGroupMsgRejectData) error
 type QQGroupMsgReceiveHandler func(event *dto.WSPayload, data *dto.WSQQGroupMsgReceiveData) error
 type QQC2cMessageCreateHandler func(event *dto.WSPayload, data *dto.WSQQC2cMessageCreateData) error
-type QQGroupAtMessageCreateHandler func(event *dto.WSPayload, data *dto.WSQQGroupAtMessageCreateData) error
+type QQGroupAtMessageCreateHandler func(event *dto.WSPayload, data *dto.WSMessageData) error
 
 // RegisterHandlers 注册事件回调，并返回 intent 用于 websocket 的鉴权
 func RegisterHandlers(handlers ...interface{}) dto.Intent {

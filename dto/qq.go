@@ -43,21 +43,9 @@ type QQAuthor struct {
 	UserOpenid string `json:"user_openid,omitempty"`
 }
 
-type QQGroupAuthor struct {
-	MemberOpenid string `json:"member_openid,omitempty"`
-}
-
 type QQC2cMessageCreateData struct {
 	ID        string    `json:"id"`
 	Author    QQAuthor  `json:"author"`
 	Content   string    `json:"content"`
 	Timestamp Timestamp `json:"timestamp"`
-}
-
-type QQGroupAtMessageCreateData struct {
-	ID          string        `json:"id"`
-	Author      QQGroupAuthor `json:"author"`
-	GroupOpenid string        `json:"group_openid"`
-	Content     string        `json:"content"`
-	Timestamp   Timestamp     `json:"timestamp"`
 }

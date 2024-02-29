@@ -8,7 +8,7 @@ type MessageToCreate struct {
 	Embed   *Embed `json:"embed,omitempty"`
 	Ark     *Ark   `json:"ark,omitempty"`
 	Image   string `json:"image,omitempty"`
-	//0 是文本，1 图文混排 ，2 是 markdown 3 ark，4 embed
+	//0 是文本，1 图文混排 ，2 是 markdown 3 ark，4 embed，7 media 富媒体
 	MsgType int `json:"msg_type,omitempty"`
 	// 要回复的消息id，为空是主动消息，公域机器人会异步审核，不为空是被动消息，公域机器人会校验语料
 	MsgID            string                    `json:"msg_id,omitempty"`

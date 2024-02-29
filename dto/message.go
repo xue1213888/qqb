@@ -8,6 +8,8 @@ type Message struct {
 	ChannelID string `json:"channel_id"`
 	// 频道ID
 	GuildID string `json:"guild_id"`
+	// 群ID
+	GroupOpenid string `json:"group_openid"`
 	// 内容
 	Content string `json:"content"`
 	// 发送时间

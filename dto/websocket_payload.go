@@ -118,4 +118,3 @@ type WSQQGroupDelRobotData QQGroupDelRobotData
 type WSQQGroupMsgRejectData QQGroupMsgRejectData
 type WSQQGroupMsgReceiveData QQGroupMsgReceiveData
 type WSQQC2cMessageCreateData QQC2cMessageCreateData
-type WSQQGroupAtMessageCreateData QQGroupAtMessageCreateData

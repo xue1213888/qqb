@@ -184,7 +184,7 @@ func qqC2cMessageCreate(payload *dto.WSPayload, message []byte) error {
 }
 
 func qqGroupAtMessageCreate(payload *dto.WSPayload, message []byte) error {
-	data := &dto.WSQQGroupAtMessageCreateData{}
+	data := &dto.Message{}
 	if err := ParseData(message, data); err != nil {
 		return err
 	}
